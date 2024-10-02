@@ -1,40 +1,84 @@
-######################### FRONT-END #########################
+# If you prefer the allow list template instead of the deny list, see community template:
+# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
+#
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
 
-# dependencies
-node_modules/
+# Test binary, built with `go test -c`
+*.test
 
-# Expo
-.expo/
-dist/
-web-build/
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
 
-# Native
-*.orig.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
+# Dependency directories (remove the comment below to include it)
+# vendor/
 
-# Metro
-.metro-health-check*
+# Go workspace file
+go.work
+go.work.sum
 
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
-
-# macOS
-.DS_Store
-*.pem
-
-# local env files
-.env*.local
-
-# typescript
-*.tsbuildinfo
-
-######################### DOCKER #########################
-
-postgres-data
+# env file
 .env
+
+# OSX
+#
+.DS_Store
+
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
+
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml
+
+# node.js
+#
+node_modules/
+package-lock.json # include if you are using npm - don't use both yarn and npm
+npm-debug.log
+yarn-error.log
+yarn.lock # include if you are using yarn - don't use both npm and yarn
+
+# BUCK
+buck-out/
+\.buckd/
+*.keystore
+
+# Fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use Fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+*/fastlane/report.xml
+*/fastlane/Preview.html
+*/fastlane/screenshots
+
+# Bundle artifact
+*.jsbundle
