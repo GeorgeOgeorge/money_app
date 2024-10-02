@@ -1,4 +1,3 @@
-
 CREATE TABLE IF NOT EXISTS "user" (
     "id" integer
         not null,
@@ -11,7 +10,8 @@ CREATE TABLE IF NOT EXISTS "user" (
         check (length(name) >= 5),
     "email" varchar(150)
         not null
-        CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$'),
+        unique
+        CHECK (email ~* '^\S+@\S+\.\S+$'),
     "password" varchar(60)
         not null,
     "phone" varchar(20)
